@@ -19,6 +19,7 @@ int main(){
 
     printf("Enter time (in years): ");
     scanf("%lf", &time);
+    
 
     si = (principal * rate * time) / 100.0;
 
@@ -31,4 +32,5 @@ int main(){
 
 
     return 0;
+
 }
