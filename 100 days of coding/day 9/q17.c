@@ -1,37 +1,20 @@
-//Write a program to find the roots of a quadratic equation and categorize them.
-#include <stdio.h>
-#include <math.h>
-
-    int main(){
-    int a = 0;
-    int b = 0;
-    int c = 0;
-    int D = 0;
-    int quad1 = 0;
-    int quad2 = 0; 
-
-        printf("Enter the value of a : ");
-        scanf("%d",&a);
-
-        printf("Enter the value of b : ");
-        scanf("%d",&b);
-        
-        printf("Enter the value of c : ");
-        scanf("%d",&c);
-
-
-
-    D = (b*b)- (4 * a * c);
-    quad1 = (-b +sqrt(D)/ 2)*a;
-    quad2 = (-b -sqrt(D)/ 2)*a;
-
-    printf("\n%d",quad1);
-    printf("\n%d",quad2);
-
-
-
-    printf("%d",D);
-        
-
+#include<stdio.h>
+#include<math.h>
+float main()
+{ float a,b,c;
+    printf("enter roots of the quadratic equations: ");
+    scanf("%f", &a);
+    scanf("%f", &b);
+    scanf("%f", &c);
+    float dis= (b*b)-(4*a*c);
+    float root1= ((-b)+sqrt(dis))/(2*a);
+    float root2= ((-b)-sqrt(dis))/(2*a);
+    printf("the roots of the equations are: %f %f \n", root1,root2);
+    if( dis>0)
+    printf("roots are real and distinct");
+    else if(dis==0)
+    printf("roots are real and equal");
+    else 
+    printf("roots are complex and imaginary");
     return 0;
-    }
+}
